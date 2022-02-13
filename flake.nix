@@ -21,12 +21,19 @@
       in
       {
         devShell = pkgs.mkShell rec {
-          name = "cs118-projects";
+          name = "cs118-stuff";
 
           packages = with pkgs; [
+            # Code
             gcc
             gnumake
             nasm
+            gdb
+
+            # Notes
+            python39Packages.watchdog
+            pandoc
+            texlive.combined.scheme-full
           ];
         };
       });
