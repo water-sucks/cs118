@@ -32,6 +32,7 @@
 
             # Notes
             python39Packages.watchdog
+            nodePackages.prettier
             pandoc
             texlive.combined.scheme-full
           ];
