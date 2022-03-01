@@ -1,5 +1,7 @@
 .ccls-cache
 .direnv
 
+**/result
+
 *.o
 *.a
