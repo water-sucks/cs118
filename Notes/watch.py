@@ -45,7 +45,7 @@ class Handler(PatternMatchingEventHandler):
         )
 
     @staticmethod
-    def on_closed(event: FileClosedEvent) -> None:
+    def on_closed(event:   FileClosedEvent) -> None:
         if event.is_directory or event.is_synthetic:
             return
         destination = event.src_path.replace(".md", ".pdf")
@@ -67,6 +67,7 @@ class LockFile:
         self.lockfile = file_name
 
     def create(self):
+        
         try:
             self.handle = os.open(
                 self.lockfile,
